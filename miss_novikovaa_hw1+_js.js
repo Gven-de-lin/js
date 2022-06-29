@@ -49,10 +49,8 @@ age2(3,2,'2')
 
 
 function age3(age_1,age_2,age_3){
-    console.log(isNan(Number(age_1)));
     if (Number.isNaN(age_1) || Number.isNaN(Number(age_2)) || Number.isNaN(Number(age_3)) ) {
         console.log("Но-но-но... А кто вводит всякую фигню вместо циферок") 
-        
     } else {
         if (age_1<age_2 ){
             console.log("You don’t have access cause your age is" + " " + age_1 + " " + "It’s less then"+ " " + age_2)
@@ -63,8 +61,7 @@ function age3(age_1,age_2,age_3){
        } else {
            console.log("Technical work")
        }
-        
-}
+     }
 }
 
 age3('gfvkuyfl',8,2)
@@ -73,7 +70,9 @@ age3('gfvkuyfl',8,2)
 // Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке
 
 function age4(age_1,age_2,age_3){
-    if (typeof (Number(age_1)) === 'number' && typeof (Number(age_2)) === 'number' && typeof (Number(age_3)) === 'number') {
+    if (Number.isNaN(age_1) || Number.isNaN(Number(age_2)) || Number.isNaN(Number(age_3)) ) {
+        console.log("Но-но-но... А кто вводит всякую фигню вместо циферок") 
+    } else {
         if (age_1<age_2 ){
             console.log("You don’t have access cause your age is" + " " + age_1 + " " + "It’s less then"+ " " + age_2)
        } else if (age_1 >=  age_2&age_1 <  age_3){
@@ -83,10 +82,7 @@ function age4(age_1,age_2,age_3){
        } else {
            console.log("Technical work")
        }
-        
-    } else {
-        console.log("Но-но-но... А кто вводит всякую фигню вместо циферок") 
-}
+     }
 }
 
 let age_1= prompt('Укажите свой возраст')
